@@ -4,8 +4,6 @@ import {hasLocale, NextIntlClientProvider} from 'next-intl';
 import {getTranslations, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
-import {SiteHeader} from '@/components/site-header';
-import {SiteFooter} from '@/components/site-footer';
 import '../globals.css';
 
 const english = localFont({
@@ -48,9 +46,7 @@ export default async function LocaleLayout({children, params}: {
       <body className={`min-h-screen bg-background text-foreground antialiased selection:bg-primary/20 ${locale === 'ar' ? 'font-arabic' : 'font-sans'}`}>
         <NextIntlClientProvider>
           <a href="#main" className="sr-only z-50 rounded-md bg-primary p-4 text-white focus:not-sr-only focus:fixed focus:start-4 focus:top-4">{t('skip')}</a>
-          <SiteHeader />
-          <main id="main">{children}</main>
-          <SiteFooter />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

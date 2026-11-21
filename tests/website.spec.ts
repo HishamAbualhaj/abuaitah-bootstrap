@@ -22,6 +22,9 @@ for (const locale of ['en', 'ar']) {
     for (const width of [375, 768, 1440]) {
       await page.setViewportSize({width, height: 900});
       await page.goto(`/${locale}`);
+      await expect(page.locator('header')).toHaveCount(1);
+      await expect(page.locator('footer')).toHaveCount(1);
+      await expect(page.locator('main')).toHaveCount(1);
       await expect(page.locator('html')).toHaveAttribute('dir', locale === 'ar' ? 'rtl' : 'ltr');
       await expect(page.getByRole('heading', {level: 1})).toBeVisible();
       await page.evaluate(() => document.fonts.ready);

@@ -77,7 +77,13 @@ Product filters/dialogs, news sorting, gallery tabs/lightboxes, site search, mob
 
 Contact and newsletter forms explain that delivery is not connected. They validate locally and display a preview acknowledgement without sending or storing information. Connect a server-side mail/subscription provider before accepting submissions. The archived job form accepts no submissions.
 
-## Verification
+## Admin preview
+
+Open `/en/admin/login` or `/ar/admin/login`. The credentials card provides the public demo account (`admin@abuaitah.ps` / `Admin123!`) and an autofill button. Successful sign-in opens `/en/admin` or `/ar/admin` with content counts, preview links, a responsive sidebar, language switching, and sign-out.
+
+This is a frontend demonstration. Session state lives in `sessionStorage` for the current tab; it is not authentication or access control. No private data is present. Replace `src/lib/admin-demo.ts` and the client session checks with server authentication and authorization when adding the backend. Content editing is not implemented yet.
+
+## Verification commands
 
 ```sh
 npx playwright install chromium
