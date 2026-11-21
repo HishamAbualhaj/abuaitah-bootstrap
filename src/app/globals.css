@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-border: #dce3df;
+  --color-input: #dce3df;
+  --color-ring: #087c43;
+  --color-background: #ffffff;
+  --color-foreground: #173e32;
+  --color-primary: #087c43;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #eef7f0;
+  --color-secondary-foreground: #173e32;
+  --color-muted: #f5f8f6;
+  --color-muted-foreground: #53665e;
+  --color-accent: #e8f3eb;
+  --color-accent-foreground: #087c43;
+  --color-destructive: #be123c;
+  --color-destructive-foreground: #ffffff;
+  --color-card: #ffffff;
+  --color-card-foreground: #173e32;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #173e32;
+  --color-brand-navy: #1e2062;
+  --color-brand-red: #d51118;
+  --color-brand-gold: #e7b95b;
+  --font-sans: var(--font-english), var(--font-arabic-face), sans-serif;
+  --font-arabic: var(--font-arabic-face), sans-serif;
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) { padding-inline: 2rem; }
+  @media (width >= 96rem) { max-width: 1240px; }
+}

@@ -1,0 +1,33 @@
+{
+  "eyebrow": "From our family to yours",
+  "title": "Goodness you know.\nTaste you love.",
+  "description": "Fresh dairy and cheeses, made with Palestinian care. Bringing the simple pleasure of good food to your table since 2011.",
+  "cta": "Explore our products",
+  "storyLabel": "Rooted in goodness",
+  "storyTitle": "A family story.\nA shared table.",
+  "storyText": "Jamal Al-Din Abu Aitah & Sons began in 2011 with a small dairy and a simple commitment: make local food we can be proud of. From our first 600 litres of fresh milk a day, we grew with the trust of our community.",
+  "brandsLabel": "Two names, one promise",
+  "brandsTitle": "The brands your family knows.",
+  "brandsText": "Two local brands, united by the same care for quality and authentic flavour.",
+  "valuesLabel": "The care behind every product",
+  "valuesTitle": "Good food starts with good values.",
+  "values": {
+    "quality": {"title": "Quality", "text": "Careful standards, from fresh ingredients to the finished product."},
+    "experience": {"title": "Experience", "text": "Knowledge and craftsmanship built over years in dairy."},
+    "trust": {"title": "Trust", "text": "A commitment to the families who choose us every day."},
+    "care": {"title": "Care", "text": "A dedicated team, working together with pride."}
+  },
+  "productsLabel": "Made for your everyday",
+  "productsTitle": "A place on every table.",
+  "productsText": "Discover our dairy, cheeses, hummus, and salads.",
+  "certification": "Quality, at the heart of what we do.",
+  "certificationText": "The original company story records ISO 22000 food safety certification in 2019.",
+  "newsLabel": "Around our community",
+  "newsTitle": "Stories worth sharing.",
+  "galleryLabel": "Life at Abu Aitah",
+  "galleryTitle": "A closer look at our world.",
+  "statYears": "Established",
+  "statMilk": "Litres per day in 2017",
+  "statLocal": "Locally made",
+  "localValue": "100%"
+}

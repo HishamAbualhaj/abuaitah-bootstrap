@@ -1,0 +1,44 @@
+{
+  "about": {
+    "title": "Our story", "subtitle": "Small beginnings. Lasting values.",
+    "intro": "Jamal Al-Din Abu Aitah & Sons for Trade and Industry was founded in 2011. Our first factory measured just 100 square metres and processed up to 600 litres of fresh milk daily.",
+    "growth": "In 2015, we expanded to more than 500 square metres, processing over 3,000 litres a day. In 2017, a new 1,500-square-metre factory was built with specialist engineers and modern equipment, raising capacity to more than 5,000 litres daily.",
+    "quality": "In 2019, the company received ISO 22000 certification. Our story is one of investing in local food, the people who make it, and the community that shares it.",
+    "goalTitle": "Our purpose", "goal": "To strengthen the value of Palestinian products by making high-quality local food that can compete with imported alternatives.",
+    "teamTitle": "The people behind the goodness", "team": "The original company profile describes a team of 30 factory workers across production lines and a fleet of around 10 refrigerated vehicles delivering products to the local market."
+  },
+  "products": {
+    "title": "Our products", "subtitle": "Everyday favourites, made with care.",
+    "all": "All products", "dairy": "Dairy", "cheese": "Cheeses", "salads": "Hummus & salads",
+    "rayeb": "Joud Rayeb", "size": "1.5 litres", "imageNote": "Product imagery from the original catalogue. Contact us for current sizes and availability.",
+    "productDetail": "A closer look", "enquire": "Ask about this product", "catalogueItem": "Catalogue product {number}"
+  },
+  "events": {
+    "title": "News & events", "subtitle": "Connected to our community.",
+    "rayeb": "Rayeb and a balanced diet", "rayebText": "From the original news archive: a look at the minerals and vitamins in dairy, and its place in everyday meals.",
+    "exhibition": "Palestinian Industries Exhibition 2021", "exhibitionText": "We were proud to take part alongside Palestinian companies, sharing local products and meeting our community.",
+    "visit": "A visit from Jabalia Municipality", "visitText": "The company welcomed a delegation from Jabalia Al-Nazla Municipality, including the mayor and his deputy.",
+    "article": "The 2021 Palestinian Industries Exhibition brought local producers and visitors together to discover Palestinian-made products. The company took part in the exhibition with other national businesses, introducing its products and supporting local industry.",
+    "articleMore": "The original report highlighted the importance of promoting Palestinian products, building their competitiveness, and strengthening partnerships with the private sector. The exhibition offered an opportunity to meet producers and experience the quality of locally made food.",
+    "related": "More from our archive"
+  },
+  "gallery": {
+    "title": "Our gallery", "subtitle": "Moments from our world.", "photos": "Photos", "videos": "Videos", "album": "From our archive · {number}",
+    "emptyVideos": "There are no video files in the original project. Browse our photos instead.", "open": "View photo {number}", "imageAlt": "Company archive photograph {number}"
+  },
+  "jobs": {
+    "title": "Careers", "subtitle": "Good things happen when we work together.",
+    "role": "Field Marketing & Public Relations Officer", "fullTime": "Full time", "closed": "Applications closed", "published": "Published", "deadline": "Application deadline", "location": "Location",
+    "archive": "This vacancy is from the original archive. Applications closed on 25 March 2022. No current vacancy is advertised here.",
+    "description": "Job description", "descriptionText": "Support field marketing, product distribution, and relationships with retail partners. Represent the company and contribute to marketing plans and reports.",
+    "requirements": "Original role requirements", "requirement1": "At least two years of experience in dairy and cheese marketing or distribution.", "requirement2": "Strong planning, reporting, communication, and teamwork skills.", "requirement3": "Good written and spoken English and familiarity with social media marketing.",
+    "apply": "Application form", "preview": "View archived application form", "applicationNotice": "This is an archived application form for a closed vacancy. You can review the fields, but applications are not accepted.",
+    "marital": "Marital status", "single": "Single", "married": "Married", "divorced": "Divorced", "widowed": "Widowed", "gender": "Gender", "male": "Male", "female": "Female", "address": "Home address", "birth": "Date of birth", "education": "Education", "bachelor": "Bachelor's degree", "student": "University student", "master": "Master's degree", "doctorate": "Doctorate", "cv": "CV", "experience": "Experience certificates", "degree": "University certificate", "license": "Driving licence", "upload": "PDF, DOC, DOCX, JPG or PNG · maximum 5 MB per file", "fileError": "Each file must be 5 MB or smaller and use PDF, DOC, DOCX, JPG or PNG format."
+  },
+  "contact": {
+    "title": "Contact us", "subtitle": "We would love to hear from you.", "messageType": "Message type", "general": "General enquiry", "products": "Product enquiry", "distribution": "Distribution", "feedback": "Feedback", "message": "Your message", "office": "Company office", "sales": "Sales manager", "landline": "Landline", "distributors": "Distributor contacts", "north": "North Gaza", "central": "Central Gaza", "rafah": "Rafah", "gaza": "Gaza", "khan": "Khan Younis", "map": "Find the company on the map"
+  },
+  "search": {"title": "Search", "subtitle": "Find something good.", "label": "Search our website", "placeholder": "Products, stories, careers…", "results": "{count, plural, =0 {No results} one {# result} other {# results}}", "prompt": "Enter a word to search our products and stories."},
+  "offers": {"title": "Offers archive", "subtitle": "A look back at our promotions.", "text": "The original website featured a New Year 2022 offer on company products. That promotion has ended. Contact us to ask about current availability and offers."},
+  "notification": {"title": "Careers announcement", "subtitle": "From our company archive.", "text": "The original announcement advertised a field marketing and public relations role with a deadline of 20 February 2022. This announcement is no longer active."}
+}
