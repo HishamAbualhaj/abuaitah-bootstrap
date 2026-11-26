@@ -26,9 +26,9 @@
   --color-brand-gold: #e7b95b;
   --font-sans: var(--font-english), var(--font-arabic-face), sans-serif;
   --font-arabic: var(--font-arabic-face), sans-serif;
-  --radius-lg: 1rem;
-  --radius-md: 0.75rem;
-  --radius-sm: 0.5rem;
+  --radius-lg: 0.375rem;
+  --radius-md: 0.375rem;
+  --radius-sm: 0.25rem;
 }
 
 @utility container {

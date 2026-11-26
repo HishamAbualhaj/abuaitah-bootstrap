@@ -81,7 +81,17 @@ Contact and newsletter forms explain that delivery is not connected. They valida
 
 Open `/en/admin/login` or `/ar/admin/login`. The credentials card provides the public demo account (`admin@abuaitah.ps` / `Admin123!`) and an autofill button. Successful sign-in opens `/en/admin` or `/ar/admin` with content counts, preview links, a responsive sidebar, language switching, and sign-out.
 
-This is a frontend demonstration. Session state lives in `sessionStorage` for the current tab; it is not authentication or access control. No private data is present. Replace `src/lib/admin-demo.ts` and the client session checks with server authentication and authorization when adding the backend. Content editing is not implemented yet.
+The dashboard manages products, news, gallery albums, careers, and office/distributor contact details. Each section has searchable, filterable, paginated tables; dedicated detail, add, and edit routes; delete confirmations; and published/featured switches. Page settings manage each public page's heading, introduction, and cover, plus the contact form heading and message types.
+
+Editors share Formik/Yup validation and English/Arabic tabs. Required English fields are validated; Arabic overrides are optional. Empty Arabic fields resolve from English per field, including after later English changes. Existing records are seeded from the public catalogue, translations, archive, and contact information. Historical careers remain closed.
+
+Media managers accept multiple image/video uploads without a fixed file count, with collapsible sections, cover selection, ordering, alternative text, captions, removal, and expandable previews. Supported formats are JPG, PNG, WebP, GIF, AVIF, MP4, WebM, and OGV. Browser storage capacity and browser codec support still apply.
+
+Records and uploaded Blobs persist in IndexedDB (`abuaitah-content-workspace`) in the current browser. Clearing site data removes them. The public website still uses its bundled content; dashboard edits do not change public pages yet. Contact enquiries and job applications are not received by the dashboard.
+
+This is a frontend demonstration. Session state lives in `sessionStorage` for the current tab; it is not authentication or access control. Replace `src/lib/admin-demo.ts` and the client session checks with server authentication and authorization when adding the backend. Replace the storage adapter in `src/lib/admin/storage.ts` with API operations and a media upload service; keep the record types, section definitions, and shared dashboard components.
+
+Management routes are `/[locale]/admin/{products,news,gallery,careers,contact}`, with `/new`, `/settings`, `/[id]`, and `/[id]/edit` subroutes.
 
 ## Verification commands
 

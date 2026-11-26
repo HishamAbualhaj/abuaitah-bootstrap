@@ -20,7 +20,7 @@ export default async function ContactPage() {
           <h2 className="mb-7 text-2xl font-bold">{t("subtitle")}</h2>
           <ContactForm />
         </div>
-        <aside className="h-fit rounded-xl bg-muted p-6 md:p-8">
+        <aside className="h-fit rounded-md bg-muted p-6 md:p-8">
           <h2 className="mb-7 text-2xl font-bold">{c("contactDetails")}</h2>
           <div className="space-y-6">
             <div className="flex gap-4">
@@ -105,7 +105,7 @@ export default async function ContactPage() {
           target="_blank"
           rel="noreferrer"
           aria-label={t("map")}
-          className="block overflow-hidden rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="block overflow-hidden rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <Image
             src={images.map.png}

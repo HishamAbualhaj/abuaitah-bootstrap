@@ -32,15 +32,15 @@ export function AdminLogin() {
   }
   return <main id="main" className="grid min-h-dvh lg:grid-cols-[0.9fr_1.1fr]">
     <section className="relative hidden flex-col justify-between overflow-hidden bg-brand-navy p-12 text-white lg:flex xl:p-16">
-      <div className="absolute -end-36 -top-36 size-[550px] rounded-full border-[80px] border-white/5" />
-      <Link href="/" className="relative w-fit"><Image src={images.mainLogo.png} alt={t('back')} width={88} height={88} className="rounded-full bg-white p-1" /></Link>
+      <div className="absolute -end-36 -top-36 size-[550px] rounded-md border-[80px] border-white/5" />
+      <Link href="/" className="relative w-fit"><Image src={images.mainLogo.png} alt={t('back')} width={88} height={88} className="rounded-md bg-white p-1" /></Link>
       <div className="relative my-16 max-w-lg"><ShieldCheck className="mb-8 size-12 text-brand-gold" /><h2 className="text-4xl font-bold leading-snug xl:text-5xl">{t('brandLine')}</h2><p className="mt-6 text-lg leading-8 text-white/80">{t('brandText')}</p></div>
       <p className="relative text-sm text-white/70">{t('panel')} · {c('brand')}</p>
     </section>
     <section className="flex flex-col px-5 py-6 md:px-12">
       <div className="flex items-center justify-between gap-3"><Button asChild variant="ghost"><Link href="/">{t('back')}</Link></Button><Button asChild variant="outline"><Link href="/admin/login" locale={locale === 'ar' ? 'en' : 'ar'}>{t('language')}</Link></Button></div>
       <div className="mx-auto my-auto w-full max-w-md py-10"><Badge variant="secondary" className="mb-6">{t('demo')}</Badge>
-        <Card className="shadow-none"><CardHeader><div className="mb-4 flex size-12 items-center justify-center rounded-xl bg-secondary text-primary"><LockKeyhole /></div><CardTitle className="text-3xl"><h1>{t('login')}</h1></CardTitle><CardDescription className="leading-7">{t('loginText')}</CardDescription></CardHeader><CardContent>
+        <Card className="shadow-none"><CardHeader><div className="mb-4 flex size-12 items-center justify-center rounded-md bg-secondary text-primary"><LockKeyhole /></div><CardTitle className="text-3xl"><h1>{t('login')}</h1></CardTitle><CardDescription className="leading-7">{t('loginText')}</CardDescription></CardHeader><CardContent>
           <form onSubmit={submit} className="space-y-5" aria-describedby="demo-notice">
             <div className="space-y-2"><Label htmlFor="admin-email">{t('email')}</Label><Input id="admin-email" name="email" type="email" autoComplete="username" dir="ltr" required value={email} onChange={e => setEmail(e.target.value)} className="min-h-12" /></div>
             <div className="space-y-2"><Label htmlFor="admin-password">{t('password')}</Label><div className="relative"><Input id="admin-password" name="password" autoComplete="current-password" type={visible ? 'text' : 'password'} dir="ltr" required value={password} onChange={e => setPassword(e.target.value)} className="min-h-12 pe-14" /><Button type="button" variant="ghost" size="icon" className="absolute end-1 top-1" onClick={() => setVisible(!visible)} aria-label={t(visible ? 'hide' : 'show')} aria-pressed={visible}>{visible ? <EyeOff /> : <Eye />}</Button></div></div>

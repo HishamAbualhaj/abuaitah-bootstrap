@@ -37,7 +37,7 @@ export function SiteHeader() {
     <header className="relative z-30 border-b border-border bg-white">
       <div className="bg-brand-navy py-2 text-center text-sm text-white"><div className="container">{t('since')}</div></div>
       <div className="container flex min-h-24 items-center justify-between gap-3 py-3">
-        <Link href="/" aria-label={t('nav.home')} className="shrink-0 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        <Link href="/" aria-label={t('nav.home')} className="shrink-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
           <Image src={images.mainLogo.png} alt={t('company')} width={72} height={72} priority className="size-[72px] object-contain" />
         </Link>
         <nav aria-label={t('menu')} className="hidden items-center gap-0.5 lg:flex">{navLinks}</nav>

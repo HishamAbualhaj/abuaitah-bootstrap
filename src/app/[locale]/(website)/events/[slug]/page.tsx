@@ -19,7 +19,7 @@ export default async function EventPage({params}: {params: Promise<{slug: string
   const format = await getFormatter();
   return <><PageHeading title={t(event.title)} subtitle={format.dateTime(new Date(`${event.date}T12:00:00Z`), {year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC'})} />
     <article className="container max-w-4xl py-14"><p className="mb-7 text-sm text-muted-foreground">{c('archiveNotice')}</p>
-      <Image src={slug === 'palestinian-industries' ? images.event_details.png : event.image} alt={t(event.title)} width={1088} height={500} sizes="(max-width: 900px) 100vw, 850px" className="mb-9 max-h-[500px] w-full rounded-xl object-cover" />
+      <Image src={slug === 'palestinian-industries' ? images.event_details.png : event.image} alt={t(event.title)} width={1088} height={500} sizes="(max-width: 900px) 100vw, 850px" className="mb-9 max-h-[500px] w-full rounded-md object-cover" />
       <div className="space-y-6 text-lg leading-9 text-muted-foreground"><p>{t(event.text)}</p>{slug === 'palestinian-industries' && <><p>{t('article')}</p><p>{t('articleMore')}</p></>}</div><div className="mt-9"><ShareButton /></div>
     </article><section className="container py-8"><SectionHeading title={t('related')} /><EventList preview /></section>
   </>;

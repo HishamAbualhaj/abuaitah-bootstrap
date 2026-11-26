@@ -6,7 +6,7 @@ export async function JobDetails() {
   const t = await getTranslations('pages.jobs');
   const c = await getTranslations('common');
   const format = await getFormatter();
-  return <div className="mb-10 space-y-6 rounded-xl border border-border p-6 md:p-8"><div className="flex flex-wrap items-center justify-between gap-4"><Badge variant="secondary">{t('closed')}</Badge><ShareButton /></div><p className="leading-7 text-muted-foreground">{t('archive')}</p>
+  return <div className="mb-10 space-y-6 rounded-md border border-border p-6 md:p-8"><div className="flex flex-wrap items-center justify-between gap-4"><Badge variant="secondary">{t('closed')}</Badge><ShareButton /></div><p className="leading-7 text-muted-foreground">{t('archive')}</p>
     <dl className="grid gap-6 sm:grid-cols-2">{[
       {label: t('location'), value: c('address')},
       {label: t('fullTime'), value: t('fullTime')},

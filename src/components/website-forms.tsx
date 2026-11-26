@@ -4,6 +4,7 @@ import {useId, useState, type FormEvent} from 'react';
 import {useTranslations} from 'next-intl';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
+import {DatePicker} from '@/components/ui/date-picker';
 import {Textarea} from '@/components/ui/textarea';
 import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
@@ -14,14 +15,14 @@ export function NewsletterForm() {
   const [checked, setChecked] = useState(false);
   return <form onSubmit={e => {e.preventDefault(); setChecked(true);}} className="space-y-3">
     <Label htmlFor={id}>{t('email')}</Label>
-    <div className="flex flex-col gap-2 sm:flex-row"><Input id={id} name="email" type="email" required autoComplete="email" dir="ltr" className="min-h-12 bg-white text-foreground" aria-describedby={`${id}-notice`} /><Button type="submit" className="min-h-12 shrink-0">{t('subscribe')}</Button></div>
+    <div className="flex flex-col gap-2 sm:flex-row"><Input id={id} name="email" type="email" required autoComplete="email" dir="ltr" className="min-h-12 text-foreground" aria-describedby={`${id}-notice`} /><Button type="submit" className="min-h-12 shrink-0">{t('subscribe')}</Button></div>
     <p id={`${id}-notice`} className="text-sm leading-6 text-white/80">{t('formNotice')}</p>
     {checked && <p role="status" className="rounded-md bg-white/10 p-3 text-sm leading-6">{t('previewFeedback')}</p>}
   </form>;
 }
 
 function FormField({label, name, type = 'text', required = true, autoComplete}: {label: string; name: string; type?: string; required?: boolean; autoComplete?: string}) {
-  return <div className="space-y-2"><Label htmlFor={name}>{label}{required && <span aria-hidden="true"> *</span>}</Label><Input id={name} name={name} type={type} required={required} autoComplete={autoComplete} className="min-h-12" /></div>;
+  return <div className="space-y-2"><Label htmlFor={name}>{label}{required && <span aria-hidden="true"> *</span>}</Label>{type === 'date' ? <DatePicker id={name} name={name} required={required} autoComplete={autoComplete} className="min-h-12" /> : <Input id={name} name={name} type={type} required={required} autoComplete={autoComplete} className="min-h-12" />}</div>;
 }
 
 function ChoiceField({label, name, options}: {label: string; name: string; options: {value: string; label: string}[]}) {
@@ -49,7 +50,7 @@ export function ApplicationForm() {
   const p = useTranslations('pages.jobs');
   const [fileError, setFileError] = useState(false);
   return <form className="space-y-7" onSubmit={e => e.preventDefault()}>
-    <p className="rounded-lg border border-brand-gold bg-brand-gold/10 p-5 leading-7">{p('applicationNotice')}</p>
+    <p className="rounded-md border border-brand-gold bg-brand-gold/10 p-5 leading-7">{p('applicationNotice')}</p>
     <div className="grid gap-6 md:grid-cols-2">
       <FormField label={t('name')} name="name" autoComplete="name" />
       <FormField label={t('email')} name="email" type="email" autoComplete="email" />
@@ -59,7 +60,7 @@ export function ApplicationForm() {
       <FormField label={p('address')} name="address" autoComplete="street-address" />
       <FormField label={p('birth')} name="birth" type="date" autoComplete="bday" />
       <ChoiceField label={p('education')} name="education" options={['bachelor', 'student', 'master', 'doctorate'].map(value => ({value, label: p(value)}))} />
-      {['cv', 'experience', 'degree', 'license'].map(name => <div key={name} className="space-y-3 rounded-lg border border-dashed border-border p-5">
+      {['cv', 'experience', 'degree', 'license'].map(name => <div key={name} className="space-y-3 rounded-md border border-dashed border-border p-5">
         <Label htmlFor={name}>{p(name)}</Label><Input id={name} name={name} type="file" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" className="h-auto min-h-12 cursor-pointer py-3 file:me-3" aria-describedby={`${name}-help`} onChange={e => {
           const file = e.target.files?.[0];
           if (file && (file.size > 5 * 1024 * 1024 || !/\.(pdf|docx?|jpe?g|png)$/i.test(file.name))) {e.target.value = ''; setFileError(true);} else {setFileError(false);}

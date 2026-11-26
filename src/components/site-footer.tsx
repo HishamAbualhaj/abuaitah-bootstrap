@@ -17,7 +17,7 @@ export async function SiteFooter() {
         </div>
       </section>
       <div className="container grid gap-10 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
-        <div><Image src={images.mainLogo.png} alt={t('company')} width={88} height={88} className="rounded-full bg-white p-1" /><p className="mt-5 max-w-xs leading-7 text-white/80">{t('footerText')}</p></div>
+        <div><Image src={images.mainLogo.png} alt={t('company')} width={88} height={88} className="rounded-md bg-white p-1" /><p className="mt-5 max-w-xs leading-7 text-white/80">{t('footerText')}</p></div>
         <nav aria-label={t('menu')} className="grid grid-cols-2 content-start gap-x-5 gap-y-2">{navItems.map(item => <Link className="flex min-h-11 items-center rounded-sm text-white/90 underline-offset-4 hover:underline focus-visible:outline-white" key={item.key} href={item.href}>{t(`nav.${item.key}`)}</Link>)}</nav>
         <div className="space-y-4"><h3 className="font-bold">{t('contactDetails')}</h3>
           <p className="flex gap-3 text-sm leading-6 text-white/85"><MapPin className="mt-1 size-5 shrink-0" />{t('address')}</p>
